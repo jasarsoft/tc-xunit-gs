@@ -14,6 +14,7 @@ namespace GameEngine.Tests
             //Act
 
             //Assert
+            Assert.True(sut.IsNoob);
         }
     }
 }
