@@ -15,5 +15,16 @@ namespace GameEngine.Tests
 
             Assert.Equal(expectedHealth, sut.Health);
         }
+
+        [Theory]
+        [MemberData(nameof(ExternalHealthDamageTestData.TestData), MemberType = typeof(ExternalHealthDamageTestData))]
+        public void TakeDamageExternal(int damage, int expectedHealth)
+        {
+            NonPlayerCharacter sut = new NonPlayerCharacter();
+
+            sut.TakeDamage(damage);
+
+            Assert.Equal(expectedHealth, sut.Health);
+        }
     }
 }
